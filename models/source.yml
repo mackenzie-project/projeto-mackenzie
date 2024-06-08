@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sources
+    database: mack-project-425820
+    schema: transactions
+    tables:
+      - name: financial_transaction
