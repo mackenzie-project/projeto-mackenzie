@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_merchant
+    description: Dimensão que contém os dados do estabelecimento onde foi realizada a transação de compra
+    columns:
+      - name: merchant_sk
+        description: Surrogate key para identificar o estabelecimento
+        tests:
+          - not_null
+          - unique
+
+      - name: merchant_name
+        description: Nome do estabelecimento
+        tests:
+          - not_null
+
+      - name: merchant_email
+        description: Email do estabelecimento
+        tests:
+          - not_null
+
+      - name: merchant_location
+        description: País onde a transação foi realizada
+        tests:
+          - not_null

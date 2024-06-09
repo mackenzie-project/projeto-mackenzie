@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_financial_transaction
+    description: Dimensão de região contendo dados de cidade e estado
+    columns:
+      - name: cidade_id
+        description: Id da cidade
+        tests:
+          - not_null
+          - unique

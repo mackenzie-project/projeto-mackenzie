@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: '{{ doc("customer_table_description")}}'
+    columns:
+      - name: customer_sk
+        description: '{{ doc("customer_sk_description")}}'
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: Nome do cliente
+        tests:
+          - not_null
+
+      - name: customer_email
+        description: Email do cliente
+        tests:
+          - not_null
