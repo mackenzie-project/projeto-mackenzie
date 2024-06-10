@@ -2,10 +2,58 @@ version: 2
 
 models:
   - name: fact_financial_transaction
-    description: Dimensão de região contendo dados de cidade e estado
+    description: '{{ doc("fact_table_description")}}'
     columns:
-      - name: cidade_id
-        description: Id da cidade
+      - name: transaction_id
+        description: '{{ doc("transaction_id_description")}}'
         tests:
           - not_null
           - unique
+
+      - name: customer_sk
+        description: '{{ doc("customer_sk_description")}}'
+        tests:
+          - not_null
+          - unique
+
+      - name: merchant_sk
+        description: '{{ doc("merchant_sk_description")}}'
+        tests:
+          - not_null
+          - unique
+
+      - name: card_sk
+        description: '{{ doc("card_sk_description")}}'
+        tests:
+          - not_null
+          - unique
+
+      - name: transaction_amount
+        description: '{{ doc("transaction_amount_description")}}'
+        tests:
+          - not_null
+
+      - name: transaction_date
+        description: '{{ doc("transaction_date_description")}}'
+        tests:
+          - not_null
+
+      - name: ip_address
+        description: '{{ doc("ip_address_description")}}'
+        tests:
+          - not_null
+
+      - name: device_type
+        description: '{{ doc("device_type_description")}}'
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: '{{ doc("transaction_type_description")}}'
+        tests:
+          - not_null
+
+      - name: fraudulent
+        description: '{{ doc("fraudulent_description")}}'
+        tests:
+          - not_null

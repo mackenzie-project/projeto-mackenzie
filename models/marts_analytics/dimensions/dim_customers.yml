@@ -11,11 +11,11 @@ models:
           - unique
 
       - name: customer_name
-        description: Nome do cliente
+        description: '{{ doc("customer_name_description")}}'
         tests:
           - not_null
 
       - name: customer_email
-        description: Email do cliente
+        description: '{{ doc("customer_email_description")}}'
         tests:
           - not_null
