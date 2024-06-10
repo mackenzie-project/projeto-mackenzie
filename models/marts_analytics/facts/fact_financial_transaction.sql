@@ -5,11 +5,9 @@ with fact as (
         transaction_id
         , {{ generate_surrogate_key(['customer_name', 'customer_email']) }} as customer_sk
         , {{ generate_surrogate_key(['customer_name', 'customer_email']) }} as merchant_sk
+        , {{ generate_surrogate_key(['card_number']) }} as card_sk
         , transaction_amount
         , transaction_date
-        , card_number
-        , card_expiry
-        , card_cvv
         , ip_address
         , device_type
         , transaction_type
