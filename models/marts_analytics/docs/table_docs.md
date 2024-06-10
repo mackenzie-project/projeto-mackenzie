@@ -10,6 +10,10 @@
     Valor da compra realizada
 {% enddocs %}
 
+{% docs card_transaction_table_description %}
+    Tabela gerada a partir do modelo dimensional agregando os fatos com as dimensões
+{% enddocs %}
+
 {% docs transaction_date_description %}
     Data da compra
 {% enddocs %}
