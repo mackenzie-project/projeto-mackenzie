@@ -11,16 +11,22 @@ models:
           - unique
 
       - name: card_number
+        meta:
+          contains_pii: true
         description: '{{ doc("card_number_description")}}'
         tests:
           - not_null
 
       - name: card_expiry
+        meta:
+          contains_pii: true
         description: '{{ doc("card_expiry_description")}}'
         tests:
           - not_null
 
       - name: card_cvv
+        meta:
+          contains_pii: true
         description: '{{ doc("card_cvv_description")}}'
         tests:
           - not_null

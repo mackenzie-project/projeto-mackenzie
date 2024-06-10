@@ -6,3 +6,14 @@ sources:
     schema: transactions
     tables:
       - name: financial_transaction
+        meta:
+          contains_pii: true
+        columns:
+          - name: card_number
+            meta:
+              contains_pii: true
+
+          - name: Card_CVV
+            meta:
+              contains_pii: true
+              
