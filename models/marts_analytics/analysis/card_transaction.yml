@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: card_transaction
+    description: '{{ doc("card_transaction_table_description")}}'
+    columns:
+      - name: transaction_id
+        description: '{{ doc("transaction_id_description")}}'
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: '{{ doc("customer_name_description")}}'
+        tests:
+          - not_null
+
+      - name: customer_email
+        description: '{{ doc("customer_email_description")}}'
+        tests:
+          - not_null
+
+      - name: transaction_amount
+        description: '{{ doc("transaction_amount_description")}}'
+        tests:
+          - not_null
+
+      - name: transaction_date
+        description: '{{ doc("transaction_date_description")}}'
+        tests:
+          - not_null
+
+      - name: card_number
+        description: '{{ doc("card_number_description")}}'
+        tests:
+          - not_null
+
+      - name: card_expiry
+        description: '{{ doc("card_expiry_description")}}'
+        tests:
+          - not_null
+
+      - name: card_cvv
+        description: '{{ doc("card_cvv_description")}}'
+        tests:
+          - not_null
+
+      - name: merchant_name
+        description: '{{ doc("merchant_name_description")}}'
+        tests:
+          - not_null
+
+      - name: merchant_email
+        description: '{{ doc("merchant_email_description")}}'
+        tests:
+          - not_null
+
+      - name: merchant_location
+        description: '{{ doc("merchant_location_description")}}'
+        tests:
+          - not_null
+
+      - name: ip_address
+        description: '{{ doc("ip_address_description")}}'
+        tests:
+          - not_null
+
+      - name: device_type
+        description: '{{ doc("device_type_description")}}'
+        tests:
+          - not_null
+
+      - name: transaction_type
+        description: '{{ doc("transaction_type_description")}}'
+        tests:
+          - not_null
+
+      - name: fraudulent
+        description: '{{ doc("fraudulent_description")}}'
+        tests:
+          - not_null
