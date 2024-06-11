@@ -2,6 +2,7 @@
     materialized='table'
     , cluster_by=['card_number']
     , tags=['analytics_conformed_dimension_daily']
+    , labels = {'contains_pii': 'yes'}
 ) }}
 
 with 
