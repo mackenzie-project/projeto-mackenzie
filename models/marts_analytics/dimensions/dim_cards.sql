@@ -1,4 +1,7 @@
-{{ config(materialized = 'table') }}
+{{ config(
+    materialized = 'table'
+    , labels = {'contains_pii': 'yes'}
+) }}
 
 with dimension as (
   select 
